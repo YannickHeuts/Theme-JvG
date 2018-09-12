@@ -5,11 +5,11 @@ footer, header{
     padding: 10px 20px;}
 
 footer {
-       position: absolute;
+       position: relative;
        right: 0;
-       bottom: auto;
+       bottom: 0;
        left: 0;
-       width:100%;
+       height: auto;
     }
 
 nav a {
@@ -19,8 +19,6 @@ nav a {
   display: block;
 }
 
-
-@media screen and (min-width: 801px) {
   nav {
     float: left;
   }
