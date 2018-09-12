@@ -2,7 +2,8 @@ footer, header{
     clear: both;
     color: #ffffff;
     background: #272ab4;
-    padding: 10px 20px;}
+    padding: 10px 0px;
+    width:100%;}
 
 footer {
        position: relative;
@@ -97,20 +98,25 @@ nav a {
 
       .fgrid {
 
-        width: 80%;
+        width: 100%;
+        align: center;
         align-items: center;
         display: grid;
         grid-template-rows: unset;
         grid-gap: 20px;
         grid-template-areas:
-          "logo lg lg lg lg lg md";}
+          "logo lg lg lg lg md";}
 
       .fitem-1{   grid-area: logo;
-                  width: 100px;}
+                  width: 100px;
+                  padding: 5px 20px;}
       .fitem-2{   grid-area: lg;
                   align: center;
                   vertical-align: middle;
                   width: 80%;}
       .fitem-3{   grid-area: md;
-                  align: right;}
+                  align: center;
+                  align-content: stretch;
+                  width: 100px;
+                  }
     }

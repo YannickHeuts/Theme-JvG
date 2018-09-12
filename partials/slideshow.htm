@@ -1,14 +1,17 @@
 ==
-<img class="mySlides" src="/themes/yannick/assets/img/front1.jpg" style="width:100%">
-<img class="mySlides" src="/themes/yannick/assets/img/front2.jpg" style="width:100%">
-<img class="mySlides" src="/themes/yannick/assets/img/front3.jpg" style="width:100%">
+<div class="slideshow-container">
+<img class="mySlides fade" src="/themes/yannick/assets/img/front1.jpg" style="width:100%">
+<img class="mySlides fade" src="/themes/yannick/assets/img/front2.jpg" style="width:100%">
+<img class="mySlides fade" src="/themes/yannick/assets/img/front3.jpg" style="width:100%">
 
 <button class="button display-left" onclick="plusDivs(-1)">&#10094;</button>
 <button class="button display-right" onclick="plusDivs(+1)">&#10095;</button>
+</div>
 
 <script>
 var slideIndex = 1;
 showDivs(slideIndex);
+showSlides();
 
 function plusDivs(n) {
     showDivs(slideIndex += n);
@@ -24,4 +27,17 @@ function showDivs(n) {
     }
     x[slideIndex-1].style.display = "block";
 }
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    slides[slideIndex-1].style.display = "block";
+    setTimeout(showSlides, 10000); // Change image every 2 seconds
+}
+
 </script>
