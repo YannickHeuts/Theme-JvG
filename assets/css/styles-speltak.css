@@ -1,0 +1,163 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #606060;
+    background: white;
+    font-size: 90%;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 20px;
+    }
+
+h1, h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;}
+
+article a {
+  text-decoration: none;
+  color: #606060;
+}
+
+article a:hover{
+  text-decoration: underline;
+}
+
+article li {
+  list-style-type: none;
+  margin-right: -4px;
+  position: relative;
+  background: #fff;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+article li:hover {
+  background: lightgrey;}
+
+@media screen and (min-width: 801px) {
+  .content {
+      width: 100%;
+      text-align: left;
+  }
+  .grid{
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(5, auto);
+    grid-gap: 20px;
+    grid-template-areas:
+      "s2 lg lg lg s1 s1"
+      "s2 lg lg lg s1 s1"
+      "s2 lg lg lg s1 s1"
+      "sz s3 s3 s3 s1 s1"
+      "sz s3 s3 s3 s1 s1";
+  }
+
+  .item-1{    grid-area: lg;
+              text-align: left;}
+  .item-2{    grid-area: s1;
+              width: 80%;
+              text-align: left;
+              margin-bottom: 3cm;}
+  .item-2 vloot {
+              text-align: left;
+              width:70%;
+  }
+  .item-3{    grid-area: s3;
+              text-align: left;
+              margin-bottom: 2cm;}
+  .item-4{    grid-area: s2;
+              width: 80%;}
+}
+
+@media (max-width: 800px) {
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  }
+  nav ul li {
+    list-style-type: none;
+    font: bold 12px/18px sans-serif;
+    display: block;
+    background: #fff;
+    cursor: pointer;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+
+  nav ul li:hover {
+    background: lightgrey;
+    color: white;
+  }
+
+  .content {
+      width: 100%;
+      text-align: left;
+  }
+  .grid{
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(5, auto);
+    grid-gap: 20px;
+    grid-template-areas:
+      "lg lg lg lg lg lg lg lg"
+      "lg lg lg lg lg lg lg lg"
+      "s1 s1 s1 s1 s1 s1 s1 s1"
+      "s2 s2 s2 s2 s2 s2 s2 s2"
+      "s3 s3 s3 s3 s3 s3 s3 s3";
+  }
+
+  .item-1{    grid-area: lg;}
+  .item-2{    grid-area: s1;}
+  .item-3{    grid-area: s2;}
+  .item-4{    grid-area: s3;}
+}
+
+.wrapper {
+    width: 70%;
+    margin: 0 auto;
+    background: white;}
+
+.logo{
+  display: inline-block;
+  width: 50%;
+  max-width: 150px;
+  margin: 0 auto;
+}
+#content {overflow:auto;}
+
+.button{
+  border:none;
+  display:inline-block;
+  padding:8px 16px;
+  vertical-align:middle;
+  overflow:hidden;
+  text-decoration:none;
+  color:inherit;
+  background-color:lightgrey;
+  text-align:center;
+  cursor:pointer;
+  white-space:nowrap}
+  .display-left{position:absolute;top:50%;left:0%;transform:translate(0%,-50%);-ms-transform:translate(-0%,-50%)}
+  .display-right{position:absolute;top:50%;right:0%;transform:translate(0%,-50%);-ms-transform:translate(0%,-50%)}
+  .gallery{max-width:980px;margin:auto;position:relative;}
+
+  .info a {
+    text-decoration: underline;
+    font-style: italic;
+
+  }
+
+.vloot p h3 {
+  margin: 0;
+  padding: 0;
+}

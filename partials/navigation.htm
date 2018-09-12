@@ -1,0 +1,34 @@
+description = "navigation of the site"
+==
+<ul>
+    <li><a href="{{ 'home'|page }}">Home</a></li>
+    <li><div class="dropdown">
+        <a href="{{ 'dolfijnen'|page }}">Dolfijnen</a>
+          <div class="dropdown-content">
+              <a href="{{ 'agenda'|page({speltak: "dolfijnen"}) }}">Agenda</a>
+              <a href="{{ 'blog'|page({slug: "dolfijnen"})}}">Blog</a>
+          </div>
+        </div></li>
+    <li><div class="dropdown">
+      <a href="{{ 'zeeverkenners'|page }}">Zeeverkenners</a>
+      <div class="dropdown-content">
+          <a href="{{ 'agenda'|page({speltak: "zeeverkenners"}) }}">Agenda</a>
+          <a href="{{ 'blog'|page({slug: "zeeverkenners"}) }}">Blog</a>
+      </div>
+    </div></li>
+    <li><div class="dropdown">
+      <a href="{{ 'wiva'|page }}">Wilde Vaart</a>
+      <div class="dropdown-content">
+          <a href="{{ 'agenda'|page({speltak: "wiva"}) }}">Agenda</a>
+          <a href="{{ 'blog'|page({slug: "wiva"}) }}">Blog</a>
+      </div>
+    </div></li>
+    <li><a href="{{ 'loodsen'|page }}">Loodsen</a></li>
+    <li><a href="{{ 'ntd'|page }}">NTD</a></li>
+    <li><div class="dropdown"><a href="{{ 'over'|page }}">Over</a>
+        <div class="dropdown-content">
+            <a href="{{ 'vloot'|page}}">De vloot</a>
+            <a href="{{ 'geschiedenis'|page}}">Geschiedenis</a></div></div>
+        </li>
+    <li><a href="{{ 'contact'|page }}">Contact</a></li>
+</ul>

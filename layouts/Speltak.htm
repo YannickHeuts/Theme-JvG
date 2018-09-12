@@ -1,0 +1,116 @@
+description = "Pagina voor de speltakken"
+==
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name= "desciption" content= "Waterscouting Jan van Gent">
+        <meta http-equiv= "author" content="Y.J.J. Heuts">
+        <link href="{{ 'assets/css/styles-speltak.css'|theme }}" rel="stylesheet">
+        <link rel="stylesheet" href="{{ 'assets/css/headerfooternav.css'|theme }}" >
+        <title>Waterscouting jan van Gent</title>
+        {% styles %}
+    </head>
+
+    <body class="body">
+        <header>
+          {% partial "header" %}
+        </header>
+
+        <div class="wrapper">
+        <nav class = "navigation">
+          {% partial "navigation"%}
+        </nav>
+
+        <div class="grid">
+            <article class="item-1">
+              {% page %}
+            </article>
+
+            <div class="item-2">
+                {% if this.page.title == "Dolfijnen" %}
+                {% content "df-staf" %}
+
+                {% elseif this.page.title == "Zeeverkenners" %}
+                {% content "zv-staf" %}
+
+                {% elseif this.page.title == "Wilde Vaart" %}
+                {% content "wv-staf" %}
+
+                {% elseif this.page.title == "Loodsen" %}
+                {% content "loodsen"%}
+
+                {% elseif this.page.title == "NTD" %}
+                {% content "ntdkader" %}
+
+                {% elseif this.page.title == "vloot"%}
+                {% content "vloot"%}
+
+                {% elseif this.page.title == "Over"%}
+                {% content "over"%}
+
+                {% else %}
+                <p>
+                    Twig is not working... Please contact the admin!!
+                </p>
+                {% endif %}
+            </div>
+
+            <div class="item-3">
+                {% if this.page.title == "vloot"%}
+
+                {% else %}
+                {% partial "Lidaanmelding" %}
+                {% endif %}
+            </div>
+
+            <div class="item-4">
+                {% if this.page.title == "Dolfijnen" %}
+                <div>
+                <img src="/themes/yannick/assets/img/Speltakteken_df.png" width="100%" height="auto"/>
+                </div>
+                {% elseif this.page.title == "Zeeverkenners" %}
+                <div>
+                <img src="/themes/yannick/assets/img/Speltakteken_zv.png" width="100%" height="auto"/>
+                </div>
+                {% elseif this.page.title == "Wilde Vaart" %}
+                <div>
+                <img src="/themes/yannick/assets/img/Speltakteken_wv.png" width="100%" height="auto"/>
+                </div>
+                {% elseif this.page.title == "Loodsen" %}
+
+
+                {% elseif this.page.title == "NTD" %}
+
+                {% elseif this.page.title == "vloot"%}
+                <div>
+
+                </div>
+
+                {% elseif this.page.title == "Over"%}
+                <div>
+                <img src="/themes/yannick/assets/img/jvg2.png" width="100%" height="auto"/>
+                </div>
+                {% else %}
+                <p>
+                    Twig is not working... Please contact the admin!!
+                </p>
+                {% endif %}
+            </div>
+
+        </div>
+
+
+
+    </div> <!-- wrapper -->
+    <footer>
+        {% partial "footer" %}
+    </footer>
+        <!-- Scripts -->
+        <script src="{{ 'assets/js/jquery.js'|theme }}"></script>
+        <script src="{{ 'assets/js/app.js'|theme }}"></script>
+        {% framework extras %}
+        {% scripts %}
+    </body>
+</html>

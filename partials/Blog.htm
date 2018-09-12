@@ -1,0 +1,12 @@
+description = "Blogposts"
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 4
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog"
+postPage = "post"
+==
+<h2>Nieuws</h2>
+{% component 'blogPosts' %}

@@ -1,0 +1,55 @@
+description = "Single collum design"
+==
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name= "desciption" content= "Waterscouting Jan van Gent">
+        <meta http-equiv= "author" content="Y.J.J. Heuts">
+        <link href="{{ 'assets/css/styles-sc.css'|theme }}" rel="stylesheet">
+        <link rel="stylesheet" href="{{ 'assets/css/headerfooternav.css'|theme }}" >
+        <title>Waterscouting jan van Gent</title>
+        {% styles %}
+    </head>
+
+<body class = "body">
+
+      <header>
+        {% partial "header" %}
+      </header>
+
+      <div class="wrapper">
+      <nav class = "navigation">
+        {% partial "navigation"%}
+      </nav>
+
+<div class="grid">
+
+      <div class="item-1">
+          <article>
+            {% content "contactpage" %}
+          </article>
+          {% page %}
+      </div>
+
+      <div class="item-2">
+          {% partial "fb" %}
+      </div>
+
+  </div> <!-- grid -->
+
+      </div> <!-- wrapper -->
+      <footer>
+          {% partial "footer" %}
+      </footer>
+
+
+
+        <!-- Scripts -->
+        <script src="{{ 'assets/js/jquery.js'|theme }}"></script>
+        <script src="{{ 'assets/js/app.js'|theme }}"></script>
+        {% framework extras %}
+        {% scripts %}
+</body>
+</html>
